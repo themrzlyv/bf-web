@@ -13,6 +13,11 @@ jobs:
     deploy:
         name: Deliver to docker image to github container registry
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+            attestations: write
+            id-token: write
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
