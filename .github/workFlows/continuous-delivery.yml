@@ -1,7 +1,7 @@
 name: Continuous Delivery for testers
 
 on:
-    realese:
+    release:
         types: [published]
     workflow_dispatch:
 
