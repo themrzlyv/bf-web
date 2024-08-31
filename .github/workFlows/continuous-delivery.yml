@@ -7,7 +7,7 @@ on:
 
 env:
     REGISTRY: ghcr.io
-    IMAGE_NAME: ${{ github.actor }}/bf-web-docker-image:latest
+    IMAGE_NAME: ${{ github.actor }}/msc-wallet-web-docker-image:latest
 
 jobs:
     deploy:
