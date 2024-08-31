@@ -1,7 +1,7 @@
 name: Continuous Deployment
 
 on:
-    realese:
+    release:
         types: [published]
     workflow_dispatch:
 

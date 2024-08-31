@@ -27,7 +27,7 @@ jobs:
             - name: Build
               run: npm run build
 
-            -name: Checkout Typescript errors
+            - name: Checkout TypeScript errors
               run: npm run i -g typescript && tsc
 
             - name: Checkout ESLint errors
