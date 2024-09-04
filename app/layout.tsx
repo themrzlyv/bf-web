@@ -1,10 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "../styles/globals.css";
-import { Footer, Header } from "components";
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
+import { Footer, Header } from "shared/ui";
+import StoreProvider from "./store-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-secondary-default h-screen`}>
-        <Header />
-        {children}
-        <Footer  />
+      <body className={` bg-secondary-default h-screen`}>
+        <StoreProvider>
+          <Header />
+          {children}
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

@@ -13,5 +13,10 @@ export default [
   // ignore rules
   {
     ignores: ["./next/*", "./**/*.test.tsx", "./**/*.test.ts"],
+    rules: {
+      "react/prop-types": 0,
+      "@typescript-eslint/no-require-imports": 0,
+      "@typescript-eslint/no-empty-object-type": 0,
+    },
   },
 ];
