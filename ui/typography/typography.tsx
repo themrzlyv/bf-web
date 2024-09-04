@@ -5,7 +5,13 @@ type Props = {
   children: Readonly<React.ReactNode>;
   className?: string;
   variant?: "header" | "h1" | "h2" | "h3" | "p" | "small" | "large";
-  color?: "secondary" | "primary" | "danger" | "success" | "warning" | "default";
+  color?:
+    | "secondary"
+    | "primary"
+    | "danger"
+    | "success"
+    | "warning"
+    | "default";
 };
 
 const roboto = Roboto({
@@ -24,7 +30,7 @@ export const Typography = ({
     h1: "text-4xl font-bold",
     h2: "text-3xl font-bold",
     h3: "text-2xl font-bold",
-    large: "text-lg font-medium",
+    large: "text-lg font-default",
     p: "text-base font-default",
     small: "text-sm font-thin text-gray-500",
   };
@@ -43,7 +49,7 @@ export const Typography = ({
 
   return (
     <div
-      className={`${roboto.className} ${classes} ${colorClass} ${className}`}
+      className={` ${roboto.className} ${className} ${classes}  ${colorClass} `}
     >
       {children}
     </div>
